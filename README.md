@@ -11,16 +11,15 @@ It provides current weather, a 10-day forecast, dynamic gradient backgrounds bas
 
 ## 🌤️ Screenshots
 
-> Replace these image paths with your actual screenshots
 
 - **Home Screen (Search + Current Weather)**  
-  ![Home](./assets/screenshots/home.png)
+  ![Home](./assets/images/home.png)
 
 - **10-Day Forecast View**  
-  ![Forecast](./assets/screenshots/forecast.png)
+  ![Forecast](./assets/images/forecast.png)
 
 - **Explore (Multiple Cities)**  
-  ![Explore](./assets/screenshots/explore.png)
+  ![Explore](./assets/images/explore.png)
 
 ---
 
