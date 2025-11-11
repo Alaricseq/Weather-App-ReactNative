@@ -1,50 +1,133 @@
-# Welcome to your Expo app 👋
+# Weather Forecast — Expo (React Native)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+[![Expo](https://img.shields.io/badge/Expo-✔︎-2D9CDB)](https://expo.dev)
+[![React Native](https://img.shields.io/badge/React%20Native-✔︎-61DAFB)](https://reactnative.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-## Get started
+A modern and visually appealing **Weather Forecast App** built using **Expo Router** and **React Native**.  
+It provides current weather, a 10-day forecast, dynamic gradient backgrounds based on conditions, and an explore tab with weather info from cities around the world.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🌤️ Screenshots
 
-2. Start the app
+> Replace these image paths with your actual screenshots
 
-   ```bash
-   npx expo start
-   ```
+- **Home Screen (Search + Current Weather)**  
+  ![Home](./assets/screenshots/home.png)
 
-In the output, you'll find options to open the app in a
+- **10-Day Forecast View**  
+  ![Forecast](./assets/screenshots/forecast.png)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Explore (Multiple Cities)**  
+  ![Explore](./assets/screenshots/explore.png)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## ✨ Features
 
-When you're ready, run:
+- 🔍 Search any city and view real-time weather data  
+- 🌈 Dynamic gradient backgrounds depending on weather type  
+- 🗓️ 10-day forecast directly on the home page  
+- 🏙️ Explore tab showing live weather for popular cities  
+- 🧭 Tab navigation via **Expo Router**  
+- 🔒 Environment variables using `.env` for API key protection  
 
-```bash
-npm run reset-project
-```
+---
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🛠️ Tech Stack
 
-## Learn more
+- **Expo (React Native Framework)**
+- **Expo Router**
+- **TypeScript**
+- **OpenWeather API**
+- **expo-linear-gradient**
+- **@env (react-native-dotenv)**
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 📁 Project Structure
 
-## Join the community
+app/
+├─ (tabs)/
+│ ├─ _layout.tsx # Tab layout (Home + Explore)
+│ ├─ index.tsx # Home / 10-day Forecast
+│ └─ explore.tsx # Explore page with multiple cities
+assets/
+└─ screenshots/
+├─ home.png
+├─ forecast.png
+└─ explore.png
+.env.example
+README.md
+LICENSE
 
-Join our community of developers creating universal apps.
+yaml
+Copy code
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## 🚀 Getting Started
+
+
+### 1️⃣ Clone the repository
+
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
+### 2️⃣ Install dependencies
+  
+  npm install
+  #  or
+  yarn
+
+### 3️⃣ Create a .env file
+  Use the example file as reference:
+
+  cp .env.example .env
+
+  Then add your OpenWeather API key:
+
+  WEATHER_API_KEY=your_openweather_api_key_here
+### 4️⃣ Start the app
+
+  npx expo start
+  Run it on your phone using the Expo Go app or an emulator.
+
+## 🌦️ Environment Variables
+This project uses react-native-dotenv to safely manage API keys.
+
+Example:
+
+ts
+Copy code
+import { WEATHER_API_KEY } from '@env';
+const API_KEY = WEATHER_API_KEY;
+.env.example
+env
+Copy code
+WEATHER_API_KEY=your_openweather_api_key_here
+⚠️ Make sure .env is listed in .gitignore to prevent leaks!
+
+## 🎨 Dynamic Background Logic
+Each weather condition has its own color palette:
+
+Weather	Gradient
+Clear	['#FFD700', '#FF8C00']
+Clouds	['#757F9A', '#D7DDE8']
+Rain / Thunderstorm	['#314755', '#26a0da']
+Snow	['#83a4d4', '#b6fbff']
+Mist / Fog	['#606c88', '#3f4c6b']
+
+This is handled via a helper in index.tsx to keep visuals adaptive.
+
+
+📜 License
+This project is licensed under the MIT License — see the LICENSE file for details.
+
+👤 Author
+Alaric Sequeira
+
+
+---
+
+## 📄 `LICENSE` (MIT License)
